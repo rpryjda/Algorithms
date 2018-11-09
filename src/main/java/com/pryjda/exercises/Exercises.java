@@ -18,7 +18,7 @@ public class Exercises {
     public Integer[] findPartOfArrayFromParticularIndex(Integer index, Integer[] values) {
         Integer[] partOfArray = new Integer[values.length - index];
         for (int i = 0; i <= partOfArray.length - 1; i++) {
-            partOfArray[i] = values[index+i];
+            partOfArray[i] = values[index + i];
         }
         return partOfArray;
     }
