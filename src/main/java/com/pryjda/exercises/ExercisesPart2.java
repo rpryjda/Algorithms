@@ -63,4 +63,23 @@ public class ExercisesPart2 {
             System.out.println(Arrays.toString(output));
         }
     }
+
+    /**
+     * Metoda wypisująca wartości w tablicy razem z numerem indeksu.
+     * Wypisuje tyle wierszy ile tablica posiada elementów.
+     * W każdym kolejnym wierszu jest pomijany każdy kolejny element z końca tablicy.
+     * Przykład:
+     * [0:123, 1:22, 2:98]
+     * [0:123, 1:22]
+     * [0:123]
+     */
+    public void displayManyTimesArrayWithIgnoredLastElement(Integer[] input) {
+        for (int j = 0; j < input.length; j++) {
+            String[] output = new String[input.length - j];
+            for (int i = 0; i < input.length - j; i++) {
+                output[i] = i + ":" + input[i];
+            }
+            System.out.println(Arrays.toString(output));
+        }
+    }
 }

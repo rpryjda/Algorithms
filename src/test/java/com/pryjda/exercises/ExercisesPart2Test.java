@@ -59,7 +59,7 @@ class ExercisesPart2Test {
         String result = outContent.toString();
 
         //then (assert)
-        assertEquals(expected,result);
+        assertEquals(expected, result);
     }
 
     @Test
@@ -76,6 +76,23 @@ class ExercisesPart2Test {
         String result = outContent.toString();
 
         //then (assert)
-        assertEquals(expected,result);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    void shouldDisplayManyTimesArrayWithIgnoredLastElement() {
+        //given (arrange)
+        Integer[] array = {123, 22, 98};
+        System.setOut(new PrintStream(outContent));
+        String expected = "[0:123, 1:22, 2:98]" + System.getProperty("line.separator") +
+                "[0:123, 1:22]" + System.getProperty("line.separator") +
+                "[0:123]" + System.getProperty("line.separator");
+
+        //when (act)
+        exe.displayManyTimesArrayWithIgnoredLastElement(array);
+        String result = outContent.toString();
+
+        //then (assert)
+        assertEquals(expected, result);
     }
 }
